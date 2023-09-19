@@ -2,10 +2,10 @@ import { defineStore } from "pinia"
 export const useTaskStore = defineStore( 'taskStore', {
    state: () => ( {
       tasks: [
-         { id: 1, title: 'buy some milk', isFav: true },
-         { id: 2, title: 'buy some bread', isFav: false },
-         { id: 3, title: 'buy some rice', isFav: false },
-         { id: 4, title: 'buy some fruits', isFav: true },
+         { id: 1, title: 'buy some milk', isFav: true, checked: true },
+         { id: 2, title: 'buy some milk2', isFav: true, checked: false },
+         { id: 3, title: 'buy some milk3', isFav: true, checked: false },
+
       ],
 
    } ),
@@ -33,7 +33,11 @@ export const useTaskStore = defineStore( 'taskStore', {
       },
       toggleFav ( id ) {
          const task = this.tasks.find( t => t.id === id )
-         task.isFav=!task.isFav
+         task.isFav = !task.isFav
+      },
+      toggleCheked ( id ) {
+         const task = this.tasks.find( t => t.id === id )
+         task.checked = !task.checked
       }
    }
 

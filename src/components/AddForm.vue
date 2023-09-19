@@ -18,6 +18,7 @@ export default {
             TaskStore.addTask( {
                title: newTask.value,
                isFav: false,
+               checked:false,
                id: Math.floor( Math.random() * 99999 )
             } )
             newTask.value=''

@@ -88,7 +88,7 @@ form input {
 .task .icons {
   display: inline-flex;
 }
-.task i {
+.task i{
   font-size: 1.4em;
   margin-left: 10px;
   cursor: pointer;
@@ -97,7 +97,21 @@ form input {
 .task i.active {
   color: #ff005d;
 }
-
+.task input {
+  height: 20px ;
+  width: 20px ;
+  font-size: 1.4em;
+  margin-left: 10px;
+  cursor: pointer;
+  color: #bbb;
+}
+.task.activex {
+background: #d1d0d0;
+opacity: .6;
+}
+.task.activex .del{
+  color: #000;
+}
 /* filter nav */
 .filter {
   width: clamp(clac(100%-10px), 50%, 640px);
@@ -114,7 +128,7 @@ form input {
   border-radius: 4px;
   padding: 10px ;
   cursor: pointer;
-  font-size:clamp(.8rem,50%,1rem);
+  font-size:clamp(.5rem,2.5vw,.85rem);
   box-shadow: 2px 4px 6px rgba(0,0,0,0.05);
 }
 .filter button:hover{
