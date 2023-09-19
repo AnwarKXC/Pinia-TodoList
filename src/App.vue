@@ -5,11 +5,11 @@
       <h1> Pinia </h1>
       <AddForm/> 
     </header>
-    <nav class="filter">
-      <button @click="filter = 'all'"> All Tasks</button>
-      <button @click="filter = 'favs'">Fav Tasks</button>
-    </nav>
     <section class="task-list" v-if=" filter === 'all' ">
+      <div class="filter">
+        <button @click="filter = 'all'"> All Tasks</button>
+        <button @click="filter = 'favs'">Fav Tasks</button>
+      </div>
       <H1>All Tasks &nbsp; &nbsp; ({{ TaskStore.totalCount }})</H1>
       <div v-for="   task    of    TaskStore.tasks   ">
         <TaskDetails :task=" task " />
@@ -20,7 +20,6 @@
       <div v-for="   task    of    TaskStore.favs   ">
         <TaskDetails :task=" task " />
       </div>
-      
     </section>
   </main>
 </template>
