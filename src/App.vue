@@ -10,7 +10,7 @@
         <button @click="filter = 'all'"> All Tasks</button>
         <button @click="filter = 'favs'">Fav Tasks</button>
       </div>
-      <H1>All Tasks &nbsp; &nbsp; ({{ TaskStore.totalCount }})</H1>
+      <H2>All Tasks &nbsp; &nbsp; ({{ TaskStore.totalCount }})</H2>
       <div v-for="   task    of    TaskStore.tasks   ">
         <TaskDetails :task=" task " />
       </div>

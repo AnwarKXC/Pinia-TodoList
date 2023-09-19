@@ -41,6 +41,7 @@ form {
   grid-template-columns: 70% 30%;
   gap: 10px;
   justify-content: center;
+  margin: 0 5px;
 }
 form button {
   background: #ffdf88;
@@ -81,7 +82,8 @@ form input {
 }
 .task h3, .task .icons {
   display: inline-block;
-  font-size: clamp(.8rem,1rem,1.5rem);
+  font-size: clamp(17px, 2.5vw, 1rem);
+  color: #5c5a5a;
 }
 .task .icons {
   display: inline-flex;
@@ -98,7 +100,7 @@ form input {
 
 /* filter nav */
 .filter {
-  width: clamp(100%, 50%, 640px);
+  width: clamp(clac(100%-10px), 50%, 640px);
   margin:  auto;
   text-align: right;
 }
@@ -112,16 +114,15 @@ form input {
   border-radius: 4px;
   padding: 10px ;
   cursor: pointer;
-  font-size: 0.8em;
-  font-size: 1em;
+  font-size:clamp(.8rem,50%,1rem);
   box-shadow: 2px 4px 6px rgba(0,0,0,0.05);
 }
 .filter button:hover{
   background: #fad671;
 
 }
-@media screen and (min-width: 480px) {
-
+.task-list h2{
+  font-size: clamp(20px, 2.5vw, 1.5rem);
 }
 /* new task form */
 .new-task-form {
